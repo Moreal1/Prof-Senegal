@@ -41,6 +41,22 @@ app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 
+// Route d'accueil
+app.get('/', (req, res) => {
+  res.json({
+    message: '✅ API Prof Sénégal',
+    status: 'En ligne',
+    endpoints: {
+      auth: '/api/auth',
+      schools: '/api/schools',
+      classes: '/api/classes',
+      schedules: '/api/schedules',
+      assignments: '/api/assignments',
+      documents: '/api/documents',
+    }
+  });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/schools', schoolRoutes);
 app.use('/api/classes', classRoutes);
