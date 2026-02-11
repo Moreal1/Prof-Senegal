@@ -1,0 +1,22 @@
+{
+  "short_name": "ProfSenegal",
+  "name": "Prof Sénégal - Gestion des Professeurs",
+  "description": "Application de gestion pour les professeurs au Sénégal",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1976d2",
+  "background_color": "#ffffff",
+  "orientation": "portrait"
+}
