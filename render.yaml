@@ -1,0 +1,26 @@
+services:
+  # Backend API
+  - type: web
+    name: prof-senegal-api
+    runtime: docker
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: ./server
+    plan: free
+    envVars:
+      - key: JWT_SECRET
+        value: prof_senegal_secret_2026
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+
+  # Frontend Client
+  - type: web
+    name: prof-senegal-client
+    runtime: docker
+    dockerfilePath: ./client/Dockerfile
+    dockerContext: ./client
+    plan: free
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://prof-senegal-api.onrender.com/api
