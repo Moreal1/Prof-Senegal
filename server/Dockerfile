@@ -19,3 +19,4 @@ EXPOSE 5000
 
 # Démarrer l'application
 CMD ["node", "src/app.js"]
+
